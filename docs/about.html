@@ -1,171 +1,755 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;title&gt;YousoQ - AI Emotion Journal&lt;/title&gt;
-&lt;meta name="description" content="YousoQ is an AI-powered emotion journal app that helps you understand your
-feelings, track your mood, and create unique artistic cards."&gt;
-&lt;style&gt;
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-min-height: 100vh;
-color: #fff;
-}
-.hero {
-text-align: center;
-padding: 80px 20px;
-max-width: 800px;
-margin: 0 auto;
-}
-.logo {
-width: 120px;
-height: 120px;
-background: #fff;
-border-radius: 28px;
-margin: 0 auto 30px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 48px;
-box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-}
-h1 {
-font-size: 48px;
-margin-bottom: 15px;
-font-weight: 700;
-}
-.tagline {
-font-size: 22px;
-opacity: 0.9;
-margin-bottom: 40px;
-}
-.download-btn {
-display: inline-block;
-background: #fff;
-color: #7C3AED;
-padding: 16px 40px;
-border-radius: 30px;
-text-decoration: none;
-font-weight: 600;
-font-size: 18px;
-box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-transition: transform 0.3s;
-}
-.download-btn:hover { transform: translateY(-3px); }
-.features {
-background: #fff;
-padding: 80px 20px;
-color: #333;
-}
-.features-grid {
-max-width: 1000px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 40px;
-}
-.feature {
-text-align: center;
-padding: 30px;
-}
-.feature-icon {
-width: 80px;
-height: 80px;
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-border-radius: 20px;
-margin: 0 auto 20px;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 36px;
-}
-.feature h3 {
-font-size: 20px;
-margin-bottom: 12px;
-color: #1a1a1a;
-}
-.feature p {
-color: #666;
-line-height: 1.6;
-}
-.section-title {
-text-align: center;
-font-size: 36px;
-color: #1a1a1a;
-margin-bottom: 50px;
-}
-footer {
-background: #1a1a1a;
-color: #888;
-text-align: center;
-padding: 40px 20px;
-}
-footer a {
-color: #aaa;
-text-decoration: none;
-margin: 0 15px;
-}
-footer a:hover { color: #fff; }
-.footer-links { margin-bottom: 20px; }
-.copyright { font-size: 14px; }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;section class="hero"&gt;
-&lt;div class="logo"&gt;🧠&lt;/div&gt;
-&lt;h1&gt;YousoQ&lt;/h1&gt;
-&lt;p class="tagline"&gt;AI Emotion Journal · Smart Cards · Health Tracking&lt;/p&gt;
-&lt;a href="https://apps.apple.com/app/yousoq" class="download-btn"&gt;
-📱 Download on App Store
-&lt;/a&gt;
-&lt;/section&gt;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YousoQ - AI-Powered Emotion Journal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-&lt;section class="features"&gt;
-&lt;h2 class="section-title"&gt;Key Features&lt;/h2&gt;
-&lt;div class="features-grid"&gt;
-&lt;div class="feature"&gt;
-&lt;div class="feature-icon"&gt;🎴&lt;/div&gt;
-&lt;h3&gt;AI Exclusive Mood Cards&lt;/h3&gt;
-&lt;p&gt;AI generates unique artistic cards based on your emotions to capture every moment&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="feature"&gt;
-&lt;div class="feature-icon"&gt;🤖&lt;/div&gt;
-&lt;h3&gt;AI Emotion Analysis&lt;/h3&gt;
-&lt;p&gt;CBT-based intelligent analysis combining health data for deep emotional insights&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="feature"&gt;
-&lt;div class="feature-icon"&gt;📝&lt;/div&gt;
-&lt;h3&gt;Emotion Logging&lt;/h3&gt;
-&lt;p&gt;Record your mood with emojis or text, with Apple Watch quick logging support&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="feature"&gt;
-&lt;div class="feature-icon"&gt;📊&lt;/div&gt;
-&lt;h3&gt;Health Data Tracking&lt;/h3&gt;
-&lt;p&gt;Real-time tracking of heart rate, HRV, sleep, and steps with mood correlations&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="feature"&gt;
-&lt;div class="feature-icon"&gt;☁️&lt;/div&gt;
-&lt;h3&gt;iCloud Sync&lt;/h3&gt;
-&lt;p&gt;Securely sync your data to iCloud for seamless multi-device access&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="feature"&gt;
-&lt;div class="feature-icon"&gt;🔒&lt;/div&gt;
-&lt;h3&gt;Privacy First&lt;/h3&gt;
-&lt;p&gt;All data stored locally with Face ID / Touch ID protection&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/section&gt;
+        :root {
+            --primary: #6c63ff;
+            --primary-light: #8a84ff;
+            --primary-dark: #5149d8;
+            --secondary: #ff6584;
+            --dark: #333348;
+            --light: #f8f9ff;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+        }
 
-&lt;footer&gt;
-&lt;div class="footer-links"&gt;
-&lt;a href="privacy-policy.html"&gt;Privacy Policy&lt;/a&gt;
-&lt;a href="mailto:pandasroom@outlook.com"&gt;Contact Us&lt;/a&gt;
-&lt;/div&gt;
-&lt;p class="copyright"&gt;© 2026 YousoQ. All Rights Reserved.&lt;/p&gt;
-&lt;p style="margin-top: 10px; font-size: 12px;"&gt;Contact: pandasroom@outlook.com&lt;/p&gt;
-&lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+        body {
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.9;
+            text-decoration: underline;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(255, 101, 132, 0.1));
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--gray);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(108, 99, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(108, 99, 255, 0.4);
+        }
+
+        /* Features Section */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+            border-radius: 2px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .feature-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--light-gray);
+            color: var(--gray);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li i {
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        /* Subscription Section */
+        .subscription {
+            background-color: #f5f7ff;
+        }
+
+        .plans-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .plan-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .plan-card.featured {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+        }
+
+        .plan-card.featured .plan-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--secondary);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .plan-card:hover:not(.featured) {
+            transform: translateY(-10px);
+        }
+
+        .plan-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--light-gray);
+            color: var(--gray);
+        }
+
+        .plan-features li i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .plan-button {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .plan-button.primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .plan-button.primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .plan-button.secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .plan-button.secondary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .terms {
+            background-color: white;
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .terms h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .terms ul {
+            list-style-position: inside;
+            margin-bottom: 30px;
+        }
+
+        .terms li {
+            margin-bottom: 10px;
+            color: var(--gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .privacy-link {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        .privacy-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .plan-card.featured {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+                margin-left: 0;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .feature-card {
+                padding: 30px 20px;
+            }
+            
+            .terms {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <div class="logo-icon">💭</div>
+                    <span>YousoQ</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#subscription">Subscription</a></li>
+                    <li><a href="#terms">Terms</a></li>
+                    <li><a href="https://lukesunn.github.io" target="_blank">Privacy Policy</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Understand Your Feelings with AI</h1>
+            <p>YousoQ is an AI-powered emotion journal that helps you understand your feelings and mental wellness through intelligent analysis, unique mood cards, and real-time health tracking.</p>
+            <a href="#subscription" class="cta-button">Start Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>AI Exclusive Mood Cards</h3>
+                    <p>Unique artistic emotion cards generated just for you</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> AI creates unique artistic emotion cards just for you</li>
+                        <li><i class="fas fa-check"></i> Multiple art styles, every card is one-of-a-kind</li>
+                        <li><i class="fas fa-check"></i> Capture and share your emotional moments</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>AI Emotion Analysis</h3>
+                    <p>Intelligent analysis based on Cognitive Behavioral Therapy</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Intelligent emotion analysis based on CBT</li>
+                        <li><i class="fas fa-check"></i> Deep insights combining your health data</li>
+                        <li><i class="fas fa-check"></i> Personalized emotional recommendations</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Seamless Experience</h3>
+                    <p>Sync across devices with full data ownership</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Record your mood with emojis or text</li>
+                        <li><i class="fas fa-check"></i> Securely sync your data to iCloud</li>
+                        <li><i class="fas fa-check"></i> Export your emotion records anytime</li>
+                        <li><i class="fas fa-check"></i> Full ownership of your personal data</li>
+                    </ul>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon">⌚️</div>
+                    <h3>Health Tracking</h3>
+                    <p>Connect emotions with your physical health data</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Track heart rate, HRV, sleep, and steps in real-time</li>
+                        <li><i class="fas fa-check"></i> Automatic sync with Apple Health</li>
+                        <li><i class="fas fa-check"></i> Discover connections between health and emotions</li>
+                        <li><i class="fas fa-check"></i> Apple Watch support for quick logging</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section id="subscription" class="subscription">
+        <div class="container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            
+            <div class="plans-container">
+                <!-- Monthly Plan -->
+                <div class="plan-card">
+                    <h3>Monthly</h3>
+                    <div class="plan-price">$9.99<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> AI deep emotion analysis (3 times daily)</li>
+                        <li><i class="fas fa-check"></i> AI exclusive mood card generation (3 cards daily)</li>
+                        <li><i class="fas fa-check"></i> Complete emotional insight reports</li>
+                        <li><i class="fas fa-check"></i> All basic features included</li>
+                    </ul>
+                    <a href="#" class="plan-button primary">Get Started</a>
+                </div>
+
+                <!-- Quarterly Plan -->
+                <div class="plan-card featured">
+                    <div class="plan-badge">Most Popular</div>
+                    <h3>Quarterly</h3>
+                    <div class="plan-price">$26.99<span>/quarter</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Save 10% compared to monthly</li>
+                        <li><i class="fas fa-check"></i> AI deep emotion analysis (3 times daily)</li>
+                        <li><i class="fas fa-check"></i> AI exclusive mood card generation (3 cards daily)</li>
+                        <li><i class="fas fa-check"></i> Complete emotional insight reports</li>
+                        <li><i class="fas fa-check"></i> All basic features included</li>
+                    </ul>
+                    <a href="#" class="plan-button primary">Get Started</a>
+                </div>
+
+                <!-- Yearly Plan -->
+                <div class="plan-card">
+                    <h3>Yearly</h3>
+                    <div class="plan-price">$69.99<span>/year</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Save over 40% compared to monthly</li>
+                        <li><i class="fas fa-check"></i> AI deep emotion analysis (3 times daily)</li>
+                        <li><i class="fas fa-check"></i> AI exclusive mood card generation (3 cards daily)</li>
+                        <li><i class="fas fa-check"></i> Complete emotional insight reports</li>
+                        <li><i class="fas fa-check"></i> All basic features included</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <a href="#" class="plan-button secondary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Section -->
+    <section id="terms">
+        <div class="container">
+            <h2 class="section-title">Subscription Terms</h2>
+            <div class="terms">
+                <h3>Premium Benefits:</h3>
+                <ul>
+                    <li>AI deep emotion analysis (3 times daily)</li>
+                    <li>AI exclusive mood card generation (3 cards daily)</li>
+                    <li>Complete emotional insight reports</li>
+                </ul>
+
+                <h3>Subscription Terms:</h3>
+                <ul>
+                    <li>Payment will be charged to your Apple ID account upon confirmation of purchase</li>
+                    <li>Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period</li>
+                    <li>Account will be charged for renewal within 24 hours prior to the end of the current period</li>
+                    <li>Subscriptions may be managed and auto-renewal turned off in Account Settings after purchase</li>
+                    <li>Canceling during the free trial period will not incur any charges</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>YousoQ</h3>
+                    <p>An AI-powered emotion journal that helps you understand your feelings and mental wellness through intelligent analysis and personalized insights.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#subscription">Subscription Plans</a></li>
+                        <li><a href="#terms">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://lukesunn.github.io" target="_blank">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#subscription">Subscription Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 YousoQ. All rights reserved. | <a href="https://lukesunn.github.io" target="_blank" class="privacy-link">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+
+        // Add animation to feature cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(card);
+        });
+
+        // Observe plan cards
+        document.querySelectorAll('.plan-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
