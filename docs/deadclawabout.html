@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeadClaw</title>
+    <style>
+        /* Reset — pure black background, white text only */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* All text white/gray, no decorations */
+        h1, h2, h3, p, a, blockquote, div {
+            color: #ffffff;
+        }
+
+        /* Thin dividers */
+        hr {
+            border: none;
+            border-top: 1px solid #333;
+            margin: 4rem 0;
+        }
+
+        /* Main title */
+        .site-title {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .slogan {
+            font-size: 1.8rem;
+            font-weight: 200;
+            color: #aaaaaa;
+            margin-bottom: 3rem;
+            border-left: 2px solid #666;
+            padding-left: 1.5rem;
+        }
+
+        .slogan strong {
+            font-weight: 400;
+            color: #ffffff;
+        }
+
+        /* Manifesto block */
+        .manifesto {
+            font-size: 1.3rem;
+            max-width: 750px;
+            margin-bottom: 5rem;
+            color: #dddddd;
+            font-weight: 280;
+        }
+
+        /* Feature grid — pure text, border only */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .feature {
+            border-top: 1px solid #333;
+            padding-top: 1.5rem;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            font-weight: 350;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .feature p {
+            color: #aaaaaa;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            max-width: 250px;
+        }
+
+        /* Dialogue example — contrast */
+        .dialogue {
+            background-color: #111;
+            padding: 2.5rem;
+            margin: 4rem 0;
+            border-left: 2px solid #666;
+        }
+
+        .dialogue .user {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            font-style: normal;
+        }
+
+        .dialogue .deadclaw {
+            font-size: 1.5rem;
+            color: #888;
+            border-top: 1px dashed #333;
+            padding-top: 1.5rem;
+            font-weight: 280;
+        }
+
+        /* Footnote / quote */
+        .footnote {
+            color: #666;
+            font-size: 1rem;
+            margin: 4rem 0 2rem;
+            border-bottom: 1px solid #222;
+            padding-bottom: 2rem;
+        }
+
+        /* Contact section */
+        .contact {
+            margin: 5rem 0 3rem;
+        }
+
+        .contact-link {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-bottom: 1px solid #666;
+            padding-bottom: 0.2rem;
+            transition: border-color 0.2s;
+            font-weight: 300;
+        }
+
+        .contact-link:hover {
+            border-bottom-color: #ffffff;
+        }
+
+        /* Footer */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 3rem;
+            margin-top: 4rem;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #aaa;
+            text-decoration: none;
+            margin-right: 2rem;
+            border-bottom: 1px dotted transparent;
+        }
+
+        .footer a:hover {
+            border-bottom-color: #aaa;
+        }
+
+        .footer .copyright {
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .site-title { font-size: 2.5rem; }
+            .slogan { font-size: 1.4rem; }
+            .features { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .container { padding: 2rem 1.5rem; }
+        }
+
+        @media (max-width: 450px) {
+            .features { grid-template-columns: 1fr; }
+            .feature p { max-width: 100%; }
+        }
+
+        /* Thin line accent */
+        .thin-line {
+            width: 60px;
+            height: 1px;
+            background: #444;
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Title -->
+        <h1 class="site-title">DeadClaw</h1>
+        <div class="slogan">
+            <strong>System is Dead.</strong> You are Alive.
+        </div>
+
+        <!-- Brief manifesto -->
+        <div class="manifesto">
+            A dead claw. It won't save your photos, won't remember your words, won't keep your doodles.<br>
+            Ask it anything — it only answers: I don't know.<br>
+            Because it is dead, what you do — is real.
+        </div>
+
+        <!-- Four core functions — pure text, no emoji, no purchases -->
+        <div class="features">
+            <div class="feature">
+                <h3>Snap</h3>
+                <p>Press the shutter, see the image. Close it — the photo is gone. Only that moment of looking was real.</p>
+            </div>
+            <div class="feature">
+                <h3>Jot</h3>
+                <p>Write anything — fragments, loose thoughts. Close the page, the words vanish. Only your thinking was real.</p>
+            </div>
+            <div class="feature">
+                <h3>Doodle</h3>
+                <p>Drag your finger, lines appear. After a few seconds they fade, leaving nothing. Only the touch was real.</p>
+            </div>
+            <div class="feature">
+                <h3>Say</h3>
+                <p>Speak to it as long as you like. It always replies: I don’t know. But what you said — you truly meant to say.</p>
+            </div>
+        </div>
+
+        <!-- Dialogue example: long message vs "I don't know" -->
+        <div class="dialogue">
+            <div class="user">
+                Today in the meeting, the boss said AI could replace half our jobs. On the way home I kept thinking: if AI can do everything, what's the use of the ten years of experience I've built? What else can I do? Should I switch careers? To what? The more I think, the less I sleep. Can you tell me what I should do?
+            </div>
+            <div class="deadclaw">
+                I don't know.
+            </div>
+        </div>
+
+        <!-- Footnote — traces philosophy -->
+        <div class="footnote">
+            “It remembers nothing. So what you remember — is real.”
+        </div>
+
+        <!-- Contact — pure email, no store, no prices -->
+        <div class="contact">
+            <a href="mailto:pandansroom@outlook.com?subject=About%20DeadClaw" class="contact-link">Contact →</a>
+            <div style="margin-top: 1rem; color: #555; font-size: 0.9rem;">
+                pandansroom@outlook.com
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer legal placeholders (text only) -->
+        <div class="footer">
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">About DeadClaw</a>
+            </div>
+            <div class="copyright">
+                © 2026 DeadClaw
+            </div>
+        </div>
+
+        <!-- Final spacer -->
+        <div style="height: 2rem;"></div>
+    </div>
+</body>
+</html>
